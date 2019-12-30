@@ -23,6 +23,6 @@ RUN set -x \
     && apk update \
     && apk add --no-cache \
     openjdk11-jre="$JAVA_ALPINE_VERSION" \
-    tzdata tini \
+    tzdata tini bash\
     && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
     && [ "$JAVA_HOME" = "$(docker-java-home)" ]
