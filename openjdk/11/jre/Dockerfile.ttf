@@ -22,7 +22,7 @@ ENV JAVA_ALPINE_VERSION 11.0.5_p10-r0
 RUN set -x \
     && apk update \
     && apk add --no-cache \
-    libc6-compat \
+    gcompat \
     openjdk11-jre="$JAVA_ALPINE_VERSION" \
     tzdata ttf-dejavu tini bash \
     && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
